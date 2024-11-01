@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <div>
-      <Link to='/login'>Log out</Link>
+      <Link to='/login' className='form-btn'>Log out</Link>
     </div>
   )
 }
