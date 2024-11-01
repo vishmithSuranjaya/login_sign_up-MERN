@@ -26,35 +26,40 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Email</label>
-        <input 
-          type='text'
-          placeholder='Enter email'
-          name='email'
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
+    <div className='content'>
+    <div className='form-content'>
+    <h2>Login</h2>
+    <form onSubmit={handleSubmit}>
 
-        <label>Password</label>
-        <input 
-          type='password' // Use type 'password' for security
-          placeholder='Enter Password'
-          name='password'
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
+    <div className='form-fields'>
+    <label>Email</label>
+    <input 
+      type='text'
+      placeholder='Enter email?'
+      name='email'
+      onChange={(e)=>setEmail(e.target.value)}
+    />
+    </div>
 
-        <button type='submit'>
-          Log In
-        </button> 
-      </form>
-      <p>Don't have an Account?</p>
-      <Link to='/register'>
+    <div className='form-fields'>
+    <label>Password</label>
+    <input 
+       type='text'
+       placeholder='Enter Password?'
+       name='password'
+       onChange={(e)=>setPassword(e.target.value)}
+    />
+    </div>
+
+    <button type='submit' className='form-btn'>
+        Login
+    </button> 
+    </form>
+    <p>Already Have an Account?</p>
+    <Link to='/register'>
         Register
-      </Link>
+    </Link>
+    </div>
     </div>
   );
 }
